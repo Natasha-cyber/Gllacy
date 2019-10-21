@@ -1,0 +1,151 @@
+@font-face {
+font-family: "Myriad Pro";
+src: url("../fonts/MyriadPro-Regular.eot");
+src: url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+url("../fonts/MyriadPro-Regular.woff") format("woff"),
+url("../fonts/MyriadPro-Regular.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+
+header, footer, div, nav, section {
+  outline: #000 solid 2px;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  min-width: 1200px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #fff;
+}
+
+.container {
+  min-width: 1200px;
+
+  background-color: #849d8f;
+}
+
+.content_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 115px;
+  padding: 10px 27px 0 27px;
+}
+
+.navigation {
+  width: 853px;
+  float: left;
+}
+
+.user_block {
+  width: 267px;
+  float: right;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.slider {
+  padding: 0 27px;
+}
+
+.banners, .hits, .widgets {
+  padding: 0 27px;
+  margin-bottom: 40px;
+}
+
+.banner {
+  float: left;
+  width: 516px;
+
+  padding: 22px;
+  margin-right: 26px;
+
+  border-radius:
+}
+
+.banner:last-child {
+  margin-right: 0;
+}
+
+.hit {
+  float: left;
+  width: 267px;
+  margin-right: 26px;
+}
+
+.hit:last-child {
+  margin-right: 0;
+}
+
+.about_shop {
+  margin: 0 27px 40px;
+  padding: 15px 20px;
+}
+
+.about_shop_items {
+  float: left;
+  width: 540px;
+  margin-right: 26px;
+}
+
+.about_shop_items:last-child {
+  margin-right: 0;
+}
+
+.widget {
+  float: left;
+  width: 520px;
+  padding: 20px;
+  margin-right: 26px;
+}
+
+.widget:first-child {
+  min-height: 177px;
+}
+
+.widget:last-child {
+  margin-right: 0;
+  padding: 6px;
+}
+
+.widget_email {
+  padding: 30px 20px 35px;
+  min-height: 140px;
+}
+
+.footer {
+  padding: 35px 27px 30px;
+}
+
+.footer_social {
+  width: 267px;
+  float: left;
+  margin-right: 26px;
+}
+
+.footer_links {
+  width: 560px;
+  float: left;
+  margin-right: 26px;
+}
+
+.footer_copyright {
+  width: 267px;
+  float: left;
+}
