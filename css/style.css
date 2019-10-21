@@ -8,10 +8,10 @@ font-weight: normal;
 font-style: normal;
 }
 
-header, footer, div, nav, section {
+/*footer, div, section {
   outline: #000 solid 2px;
   background-color: rgba(255, 0, 0, 0.1);
-}
+}*/
 
 .clearfix::after {
   content: "";
@@ -31,7 +31,7 @@ body {
 .container {
   min-width: 1200px;
 
-  background-color: #849d8f;
+  background: #849d8f url(../img/ice-cream-1.png) no-repeat 50% 0 ;
 }
 
 .content_wrapper {
@@ -49,9 +49,125 @@ body {
   float: left;
 }
 
+.navigation .gllacy_logo {
+  float:left;
+  margin-left: -6px;
+  margin-right: 15px;
+}
+
+.navigation ul {
+  margin: 0;
+  padding-left: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.navigation li {
+  display: inline-block;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  vertical-align: baseline;
+}
+
+.navigation a {
+  display: block;
+
+  padding: 20px 15px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navigation a:hover {
+  padding: 5px 15px;
+
+  border-radius: 16px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.navigation .active {
+  padding: 5px 15px;
+
+  border-radius: 16px;
+  text-decoration: none;
+  background-color: #d07058;
+  color: #fff;
+}
+
 .user_block {
-  width: 267px;
+  width: 290px;
   float: right;
+
+  text-align: right;
+  font-size: 0;
+}
+
+.user_block a {
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-top: 13px;
+  margin-right: 10px;
+
+  font-size: 14px;
+  line-height: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.user_block .search {
+  width: 33px;
+  height: 33px;
+
+  background: #a1b6aa url(../img/search-icon.svg) no-repeat center;
+  border-radius: 17px;
+}
+
+.user_block .search:hover {
+    background: #fff url(../img/search-black.svg) no-repeat center;
+    color: #323232;
+}
+
+.user_block .login {
+  padding: 5px 15px 5px 45px;
+
+  background: #a1b6aa url(../img/login-icon.svg) no-repeat 16px;
+  border-radius: 17px;
+}
+
+.user_block .login:hover {
+    background: #fff url(../img/login-black.svg) no-repeat 16px;
+    color: #323232;
+}
+
+.user_block .cart {
+  padding: 5px 35px 5px 45px;
+  margin-right: 0;
+
+  background: #a1b6aa url(../img/cart-icon.svg) no-repeat 16px;
+  border-radius: 17px;
+}
+
+.user_block .cart:hover {
+    background: #fff url(../img/cart-black.svg) no-repeat 16px;
+    color: #323232;
+}
+
+.user_block p {
+  margin-top: 17px;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.user_block p span{
+  font-size: 22px;
+  line-height: 30px;
 }
 
 .content {
@@ -61,7 +177,68 @@ body {
 }
 
 .slider {
-  padding: 0 27px;
+  position: relative;
+
+  padding: 265px 0 40px;
+}
+
+.slider ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.slider li {
+  display: block;
+
+  text-align: center;
+}
+
+.slider h2 {
+  display: block;
+  width: 685px;
+
+  margin: 0 auto 30px;
+
+  font-size: 60px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  line-height: 60.35px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 23px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #fff;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+
+  background: #ed5c3e;
+  background: linear-gradient(to right, #ed5c3e, #ec593c);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  border-radius: 22px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn_big {
+  padding: 10px 40px;
+
+  font-size: 32px;
+  line-height: 46px;
+  border-radius: 32px;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #f07963, #f17c64);
 }
 
 .banners, .hits, .widgets {
@@ -71,16 +248,50 @@ body {
 
 .banner {
   float: left;
-  width: 516px;
+  width: 520px;
 
-  padding: 22px;
+  padding: 16px 20px;
   margin-right: 26px;
 
-  border-radius:
+  border-radius: 17px;
+}
+
+.banners .btn {
+  float: right;
+}
+
+.banners .rasberry {
+  background: #42060e url(../img/rasberry-background.jpg) no-repeat;
+}
+
+.banners .chocolate {
+  background: #42060e url(../img/chocolate-background.jpg) no-repeat;
 }
 
 .banner:last-child {
   margin-right: 0;
+}
+
+
+.banner h3 {
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+
+  font-size: 35px;
+  line-height: 42px;
+  color: #fff;
+}
+
+.banner p {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
 }
 
 .hit {

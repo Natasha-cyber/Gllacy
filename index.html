@@ -11,45 +11,50 @@
     <div class="container">
       <div class="content_wrapper">
         <header class="header clearfix">
-          <nav class="navigation">
-            <img src="img/gllacy-logo.svg" alt="Магазин Глейси" width="153" height="63">
+          <nav class="navigation clearfix">
+            <img class="gllacy_logo" src="img/gllacy-logo.svg" alt="Магазин Глейси" width="153" height="63">
             <ul>
               <li><a href="#">Каталог</a></li>
               <li><a href="#">Доставка и оплата</a></li>
               <li><a href="#">О компании</a></li>
             </ul>
+            <!-- меню для каталога <ul>
+              <li><span  class="active">Каталог</span></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">О компании</a></li>
+            </ul>-->
           </nav>
           <div class="user_block">
-            <a href="#"><img src="" alt=""></a>
-            <a href="#">Вход</a>
-            <a href="#">Пусто</a>
-            <span>С 10 до 20, ежедневно</span>
-            <span>8 812 450-25-25</span>
+            <a class="search" href="#"></a>
+            <a class="login" href="#">Вход</a>
+            <a class="cart" href="#">Пусто</a>
+            <p>С 10 до 20, ежедневно<br><span>8 812 450-25-25</span></p>
           </div>
         </header>
         <main class="content">
           <section class="slider">
-            <ul>
-              <li><h2></h2><a class="btn" href="#"></a></li>
-              <li><h2></h2><a class="btn" href="#"></a></li>
-              <li><h2></h2><a class="btn" href="#"></a></li>
+            <ul class="slider_slides">
+              <li class="slider_slide">
+                <h2 class="slide_title">Крем-брюле и пломбир с малиновым джемом</h2>
+                <a class="btn btn_big" href="#">Давайте оба!</a>
+              </li>
             </ul>
-            <ul>
+            <!--<ul>
               <li></li>
               <li></li>
               <li></li>
-            </ul>
+            </ul>-->
           </section>
           <section class="banners clearfix">
-            <div class="banner">
-              <b>Малинка даром!</b>
+            <div class="banner rasberry">
+              <h3>Малинка даром!</h3>
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a class="btn" href="#"></a>
+              <a class="btn" href="#">Хочу варенье!</a>
             </div>
-            <div class="banner">
-              <b>Шоколадки даром!</b>
+            <div class="banner chocolate">
+              <h3>Шоколадки даром!</h3>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a class="btn" href="#"></a>
+              <a class="btn" href="#">Хочу шоколадки!</a>
             </div>
           </section>
           <section class="hits clearfix">
@@ -143,7 +148,7 @@
               <span>Для заказов по телефону:</span>
               <p>8 812 450-25-25</p>
               <span>(с 10 до 20 ежедневно)</span>
-              <a class="btn" href="#"></a>
+              <a class="btn" href="#">Форма обратной связи</a>
             </div>
           </section>
         </main>
