@@ -650,19 +650,18 @@ input#slide3:checked ~ .container .slide3 {
 
 .widget_email_inner p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 
   font-size: 16px;
   line-height: 20px;
   color: #5a5a5a;
 }
 
-.widget_email_inner input {
-  display: inline-block;
-  vertical-align: top;
+.widget_email_inner .input_wrap {
+  float: left;
 }
 
-.widget_email_inner input[type="text"] {
+.widget_email_inner input[type="email"] {
   padding: 10px 16px;
   margin-right: 6px;
   width: 330px;
@@ -672,6 +671,10 @@ input#slide3:checked ~ .container .slide3 {
 
   border: 1px solid #b2b2b2;
   border-radius: 5px;
+}
+
+.widget_email_inner .btn {
+  margin-top: 20px;
 }
 
 .location_map {
@@ -970,7 +973,8 @@ textarea:focus:-ms-input-placeholder {
   color:transparent;
 }
 
-.feedback_form label {
+.feedback_form label,
+.widget_email_inner label {
   display: none;
   position: absolute;
   box-sizing: border-box;
@@ -987,7 +991,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .feedback_form input:focus + label,
-.feedback_form textarea:focus + label {
+.feedback_form textarea:focus + label,
+.widget_email_inner input:focus + label {
   display: block;
   color: #8fbdec;
 }
@@ -1000,6 +1005,20 @@ textarea:focus:-ms-input-placeholder {
   line-height: 24px;
   text-align: left;
   color: #343434;
+}
+
+.popup_show {
+  display: block;
+}
+
+@keyframes shake {
+  0%, 100%                {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80%      {transform: translateX(10px);}
+}
+
+.popup_error {
+  animation: shake 0.6s;
 }
 
 .popup_overlay {
