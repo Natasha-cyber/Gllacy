@@ -14,8 +14,8 @@
           <nav class="navigation clearfix">
             <a href="index.html"><img class="gllacy_logo" src="img/gllacy-logo.svg" alt="Магазин Глейси" width="153" height="63"></a>
             <ul>
-              <li class="navigation_item">
-                <a href="#" class="navigation_link navigation_link_active">Каталог</a>
+              <li class="navigation_item navigation_item_active">
+                <a href="#" class="navigation_link">Каталог</a>
                 <div class="navigation_popup_wrap">
                   <ul class="navigation_popup">
                     <li><a class="navigation_popup_title" href="#">Новинки</a></li>
@@ -47,29 +47,108 @@
             <h1>Сливочное мороженое</h1>
           </div>
           <div class="page_content">
-            <form class="filters" action="index.html" method="post">
-              <b>Сортировка: </b>
-              <select id="sort_by" class="" name="">
-                <option value="">по популярности</option>
-                <option value="">сначала недорогие</option>
-                <option value="">сначала дорогие</option>
-                <option value="">по жирности</option>
-              </select>
-              <b>Цена: 100 руб. - 500 руб.</b>
-              <!-- Бегунок -->
-              <b>Жирность: </b>
-              <label><input type="radio" name="fatness" value="null">0%</label>
-              <label><input type="radio" name="fatness" value="up_to_ten" checked>до 10%</label>
-              <label><input type="radio" name="fatness" value="up_to_thirty">до 30%</label>
-              <label><input type="radio" name="fatness" value="above_thirty">выше 30%</label>
-              <b>Наполнители: </b>
-              <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
-              <label><input type="checkbox" name="powdered_sugar" checked>сахарные присыпки</label>
-              <label><input type="checkbox" name="fruits">фрукты</label>
-              <label><input type="checkbox" name="syrups">сиропы</label>
-              <label><input type="checkbox" name="jams">джемы</label>
-              <button type="submit" name="button">Применить</button>
-            </form>
+            <section class="catalog_filters">
+              <form class="filter_form" action="catalog.html" method="post">
+                <fieldset class="filter_form_item">
+                  <legend class="filter_form_title">Сортировка: </legend>
+                  <select class="filter_form_sort" name="sort">
+                    <option value="pop">по популярности</option>
+                    <option value="expensive">сначала недорогие</option>
+                    <option value="cheap">сначала дорогие</option>
+                    <option value="fatcontent">по жирности</option>
+                  </select>
+                  <span class="filter_form_sort-icon"></span>
+                </fieldset>
+                <fieldset class="filter_form_item">
+                  <legend class="filter_form_title">Цена: <span class="filter_form_price-label"><output name="lower_cost">100 руб.</output> - <output name="upper_cost">500 руб.</output></span></legend>
+                  <div class="filter_form_price">
+                    <input type="text" name="min_price" value="100" pattern="[0-9]*">
+                    <input type="text" name="max_price" value="500" pattern="[0-9]*">
+                    <div class="filter_form_price_control">
+                      <div class="filter_form_range_scale">
+                        <div class="filter_form_range_bar"></div>
+                      </div>
+                      <div class="filter_form_range_toggle  filter_form_range_toggle-min"></div>
+                      <div class="filter_form_range_toggle  filter_form_range_toggle-max"></div>
+                    </div>
+                </div>
+                </fieldset>
+                <fieldset class="filter_form_item">
+                  <legend class="filter_form_title">Жирность:</legend>
+                  <ul class="filter_form_fatcontent">
+                    <li class="filter_form_fatcontent_item">
+                      <label class="filter_form_radio-control">
+                        <input type="radio" name="fatcontent" value="0">
+                        <span class="filter_form_radio-icon"></span>
+                        <span class="filter_form_radio-label">0%</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fatcontent_item">
+                      <label class="filter_form_radio-control">
+                        <input type="radio" name="fatcontent" value="up_to_10" checked>
+                        <span class="filter_form_radio-icon"></span>
+                        <span class="filter_form_radio-label">до 10%</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fatcontent_item">
+                      <label class="filter_form_radio-control">
+                        <input type="radio" name="fatcontent" value="up_to_30" disabled>
+                        <span class="filter_form_radio-icon"></span>
+                        <span class="filter_form_radio-label">до 30%</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fatcontent_item">
+                      <label class="filter_form_radio-control">
+                        <input type="radio" name="fatcontent" value="above_30">
+                        <span class="filter_form_radio-icon"></span>
+                        <span class="filter_form_radio-label">выше 30%</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter_form_item">
+                  <legend class="filter_form_title">Наполнители:</legend>
+                  <ul class="filter_form_fillers">
+                    <li class="filter_form_fillers_item">
+                      <label class="filter_form_checkbox-control">
+                        <input type="checkbox" name="chocolate" checked>
+                        <span class="filter_form_checkbox-icon"></span>
+                        <span class="filter_form_checkbox-label">шоколадные</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fillers_item">
+                      <label class="filter_form_checkbox-control">
+                        <input type="checkbox" name="powdered_sugar" checked>
+                        <span class="filter_form_checkbox-icon"></span>
+                        <span class="filter_form_checkbox-label">сахарные присыпки</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fillers_item">
+                      <label class="filter_form_checkbox-control">
+                        <input type="checkbox" name="fruits" disabled>
+                        <span class="filter_form_checkbox-icon"></span>
+                        <span class="filter_form_checkbox-label">фрукты</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fillers_item">
+                      <label class="filter_form_checkbox-control">
+                        <input type="checkbox" name="syrups">
+                        <span class="filter_form_checkbox-icon"></span>
+                        <span class="filter_form_checkbox-label">сиропы</span>
+                      </label>
+                    </li>
+                    <li class="filter_form_fillers_item">
+                      <label class="filter_form_checkbox-control">
+                        <input type="checkbox" name="jams">
+                        <span class="filter_form_checkbox-icon"></span>
+                        <span class="filter_form_checkbox-label">джемы</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="filter_form_btn" type="submit" name="button">Применить</button>
+              </form>
+            </section>
             <section class="catalog">
               <div class="products clearfix">
                 <div class="product">
@@ -266,11 +345,13 @@
                 </div>
               </div>
               <div class="page_navigation">
-                  <a class="current" href="#">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
+                <a class="page_navigation_arrow page_navigation_prev page_navigation_inactive" href="#"><</a>
+                <a class="page_navigation_link page_navigation_link_current" href="#">1</a>
+                <a class="page_navigation_link" href="#">2</a>
+                <a class="page_navigation_link" href="#">3</a>
+                <a class="page_navigation_link" href="#">4</a>
+                <a class="page_navigation_link" href="#">5</a>
+                <a class="page_navigation_arrow page_navigation_next" href="#">></a>
               </div>
             </section>
           </div>
