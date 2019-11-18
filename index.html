@@ -34,9 +34,28 @@
             </ul>
           </nav>
           <div class="user_block">
-            <a class="search" href="#"></a>
-            <a class="login" href="#">Вход</a>
-            <a class="cart" href="#">Пусто</a>
+            <div class="user_block_btn user_block_btn_search" href="#">
+              <div class="user_block_popup_wrap">
+                <form class="search_form_popup" action="index.html" method="get">
+                  <input type="text" name="search_query" placeholder="Что ищем?">
+                </form>
+              </div>
+            </div>
+            <div class="user_block_btn user_block_btn_login" href="#">
+              Вход
+              <div class="user_block_popup_wrap">
+                <form class="login_form_popup" action="index.html" method="post">
+                  <input type="email" name="user_email" placeholder="Электронная почта">
+                  <input type="password" name="user_password" placeholder="Пароль">
+                  <input type="submit" class="btn" value="Войти">
+                  <div class="login_form_links">
+                    <a class="login_form_link" href="#">Забыли пароль?</a>
+                    <a class="login_form_link" href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="user_block_btn user_block_btn_cart inactive" href="#">Пусто</div>
             <p>С 10 до 20, ежедневно<br><span>8 812 450-25-25</span></p>
           </div>
         </header>

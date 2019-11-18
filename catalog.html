@@ -31,9 +31,60 @@
             </ul>
           </nav>
           <div class="user_block">
-            <a class="search" href="#"></a>
-            <a class="login" href="#">Вход</a>
-            <a class="cart" href="#">Пусто</a>
+            <div class="user_block_btn user_block_btn_search" href="#">
+              <div class="user_block_popup_wrap">
+                <form class="search_form_popup" action="index.html" method="get">
+                  <input type="text" name="search_query" placeholder="Что ищем?">
+                </form>
+              </div>
+            </div>
+            <div class="user_block_btn user_block_btn_login" href="#">
+              Вход
+              <div class="user_block_popup_wrap">
+                <form class="login_form_popup" action="index.html" method="post">
+                  <input type="email" name="user_email" placeholder="Электронная почта">
+                  <input type="password" name="user_password" placeholder="Пароль">
+                  <input type="submit" class="btn" value="Войти">
+                  <div class="login_form_links">
+                    <a class="login_form_link" href="#">Забыли пароль?</a>
+                    <a class="login_form_link" href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="user_block_btn user_block_btn_cart basket_full" href="#">
+              2 товара
+              <div class="user_block_popup_wrap">
+                <div class="cart_color_wrap">
+                  <table class="cart_popup">
+                    <tbody>
+                      <tr class="cart_item">
+                        <td class="item_control"><button class="remove_product" type="button" name="remove_product"></button></td>
+                        <td class="item_preview"><img width="33" height="33" src="img/cart-orange-plombir.png" alt="Пломбир с апельсиновым джемом"></td>
+                        <td class="item_name">Пломбир с апельсиновым джемом</td>
+                        <td class="item_amount_price"><span class="item_amount">1,5 кг </span><span class="item_price">x 200 руб.</span></td>
+                        <td class="item_sum">300 руб.</td>
+                      </tr>
+                      <tr class="cart_item">
+                        <td class="item_control"><button class="remove_product" type="button" name="remove_product"></button></td>
+                        <td class="item_preview"><img width="33" height="33" src="img\cart-strawberry-plombir.png" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                        <td class="item_name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                        <td class="item_amount_price"><span class="item_amount">1,5 кг </span><span class="item_price">x 300 руб.</span></td>
+                        <td class="item_sum">450 руб.</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="cart_total_sum" colspan="5">Итого: <span class="total_sum">750 руб.</span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="5"><button class="btn" type="button" name="send_order">Оформить заказ</button></td>
+                      </tr>
+                    </tfoot>
+                 </table>
+                </div>
+              </div>
+            </div>
             <p>С 10 до 20, ежедневно<br><span>8 812 450-25-25</span></p>
           </div>
         </header>
