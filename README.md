@@ -10,8 +10,7 @@
 - Фреймворки: нет
 - JS модули: всплывающие окна.
 
-Ссылки 
+Ссылки
 ==========
 - [Главная страница](https://natasha-cyber.github.io/Gllacy/)
-- [Каталог](https://natasha-cyber.github.io/Gllacy/catalog.html)
 - [Каталог](https://natasha-cyber.github.io/Gllacy/catalog.html)
